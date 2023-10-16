@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS-445 Assignment 3!</title>
+
+    // Vega Settings
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  </head>
+  
+  <body>
+    
+    <div id="445visualization"></div>
+
+    <script>
+        var visualizationSpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "https://raw.githubusercontent.com/Yuchen830/IS445/main/building_inventory.csv"},
+
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Year Acquired", "type": "quantitative", "title": "Year Acquired"},
+    "y": {"field": "Year Constructed", "type": "quantitative", "title": "Year Constructed"}
+  },
+  "title": "Relationship Between Year Acquired and Year Constructed",
+  "width": 600,
+  "height": 400
+}
+
+        vegaEmbed('#vis', visualizationSpec);
+        .then((result) => console.log(result))
+    </script>
+</body>
+</html>
