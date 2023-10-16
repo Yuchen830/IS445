@@ -19,7 +19,7 @@
   "data": {"url": "https://raw.githubusercontent.com/Yuchen830/Yuchen830.github.io/main/building_inventory.csv"},
   "vconcat": [
     {
-      "mark": "point",
+      "mark": {"type": "point", "shape": "cross"},
       "encoding": {
         "x": {
           "field": "Year Acquired",
@@ -37,7 +37,7 @@
     },
     
     {
-      "mark": "bar",
+      "mark": {"type": "bar", "color": "#D27C00"},
       "encoding": {
         "x": {"field": "Congress Dist", "type": "ordinal", "axis": {"title": "Congressional District"}},
         "y": {
@@ -47,7 +47,8 @@
           "axis": {"title": "Total Square Footage"}
         }
       },
-      "title": "Total Square Footage by Congressional District"
+      "title": "Total Square Footage by Congressional District",
+      "width": 9.7
     }
   ]
         };
