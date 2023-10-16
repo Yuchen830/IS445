@@ -4,16 +4,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IS445 Assignment 3!</title>
+    <title>IS445 Assignment3!</title>
     
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    
   </head>
-  
   <body>
-    <div id="445visualization"></div>
+    <div id="vis"></div>
 
     <script>
         var visualizationSpec = {
@@ -21,7 +19,6 @@
   "data": {"url": "https://raw.githubusercontent.com/Yuchen830/Yuchen830.github.io/main/building_inventory.csv"},
   "vconcat": [
     {
-      <!-- Data Visualization 1 -->
       "mark": "point",
       "encoding": {
         "x": {
@@ -39,7 +36,6 @@
       "title": "Relationship between Year Acquired and Year Constructed"
     },
     
-    <!-- Data Visualization 2 -->
     {
       "mark": "bar",
       "encoding": {
@@ -54,9 +50,10 @@
       "title": "Total Square Footage by Congressional District"
     }
   ]
-};
+        };
 
-        vegaEmbed('#445visualization', visualizationSpec);
+        vegaEmbed('#vis', visualizationSpec);
     </script>
 </body>
 </html>
+
